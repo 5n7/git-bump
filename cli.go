@@ -171,6 +171,8 @@ func (c *CLI) pushTag(version *semver.Version) error {
 		}
 		return fmt.Errorf("the created tag was automatically deleted: %w", err)
 	}
+
+	fmt.Printf("\nbump version to %s\n", color.New(color.FgMagenta).Sprint(tag))
 	return nil
 }
 
@@ -211,7 +213,5 @@ func (c *CLI) Run() error {
 	if err := c.pushTag(next); err != nil {
 		return err
 	}
-
-	fmt.Printf("\nbump version to %s\n", color.New(color.FgMagenta).Sprint(next.Original()))
 	return nil
 }
