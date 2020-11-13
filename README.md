@@ -24,9 +24,9 @@ tags:
   - v1.0.0-rc1 (current version)
 
 ? select the next version
-  major: v2.0.0
-  minor: v1.1.0
 > patch: v1.0.0
+  minor: v1.1.0
+  major: v2.0.0
 ```
 
 ## References

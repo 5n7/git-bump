@@ -102,7 +102,7 @@ func (c *CLI) askNextVersion(current *semver.Version) (*semver.Version, error) {
 	var spec string
 	prompt := &survey.Select{
 		Message: "select the next version",
-		Options: []string{majorOption, minorOption, patchOption},
+		Options: []string{patchOption, minorOption, majorOption},
 		VimMode: true,
 	}
 	if err := survey.AskOne(prompt, &spec); err != nil {
